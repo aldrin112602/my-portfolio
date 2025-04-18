@@ -260,7 +260,7 @@ export default function Portfolio() {
             </p>
             <div className="mb-8">
               <h1 className="text-5xl font-bold mb-4">
-                Web{" "}
+                Web{" "} <div className="block md:hidden"></div>
                 <span className="text-teal-400">
                   <TypedText
                     texts={[" Developer ", " Designer ", " Innovator "]}
