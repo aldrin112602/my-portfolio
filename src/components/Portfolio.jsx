@@ -9,7 +9,7 @@ import Profile from "../assets/profile.png";
 import Img1 from "../assets/img_1.jpg";
 import Cv from "../assets/Aldrin Caballero.pdf";
 
-// Typing Animation Component
+
 const TypedText = ({ texts = [" Developer "], speed = 100, delay = 1000 }) => {
     const [displayText, setDisplayText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
@@ -20,14 +20,14 @@ const TypedText = ({ texts = [" Developer "], speed = 100, delay = 1000 }) => {
     useEffect(() => {
       let timer;
       
-      // Typing
+    
       if (!isDeleting && currentIndex <= currentText.length) {
         timer = setTimeout(() => {
           setDisplayText(currentText.substring(0, currentIndex));
           setCurrentIndex(currentIndex + 1);
         }, speed);
       } 
-      // Deleting
+      
       else if (isDeleting && currentIndex > 0) {
         timer = setTimeout(() => {
           setDisplayText(currentText.substring(0, currentIndex - 1));
@@ -35,15 +35,15 @@ const TypedText = ({ texts = [" Developer "], speed = 100, delay = 1000 }) => {
         }, speed / 2);
       }
   
-      // Transitions between typing and deleting
+      
       if (currentIndex > currentText.length && !isDeleting) {
-        // When we've typed the full text, wait then start deleting
+        
         timer = setTimeout(() => {
           setIsDeleting(true);
           setCurrentIndex(currentText.length);
         }, delay);
       } else if (currentIndex === 0 && isDeleting) {
-        // When we've deleted all text, move to next text in array
+        
         timer = setTimeout(() => {
           setIsDeleting(false);
           setTextArrayIndex((textArrayIndex + 1) % texts.length);
@@ -62,7 +62,6 @@ const TypedText = ({ texts = [" Developer "], speed = 100, delay = 1000 }) => {
   };
   
 
-// Fade In Animation Hook
 const useFadeIn = (threshold = 0.1) => {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef();
