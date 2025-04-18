@@ -370,7 +370,7 @@ export default function Portfolio() {
               leveling up as a developer.
             </p>
             <div className="border-t mb-6"></div>
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="block md:grid md:grid-cols-2 md:gap-4 mb-8">
               <div>
                 <p>
                   <span className="text-teal-400 font-semibold">Name:</span>{" "}
