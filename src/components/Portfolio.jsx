@@ -117,7 +117,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gray-900 text-white font-sans w-full">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-gray-900/90 backdrop-blur-md z-50 py-4 px-6 md:px-16 w-full lg:px-24">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center w-full">
           <a
             href="#home"
             onClick={() => handleNavClick("home")}
@@ -188,11 +188,11 @@ export default function Portfolio() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed inset-0 bg-gray-900/95 z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 bg-gray-900/95 z-40 transform w-full transition-transform duration-300 ease-in-out ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         } md:hidden`}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+        <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl w-full">
           <a
             href="#home"
             className={`hover:text-teal-400 transition-colors duration-300 ${
