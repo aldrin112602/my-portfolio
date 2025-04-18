@@ -117,7 +117,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gray-900 text-white font-sans">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-gray-900/90 backdrop-blur-md z-50 py-4 px-6 md:px-16 lg:px-24">
+      <nav className="fixed top-0 left-0 right-0 bg-gray-900/90 backdrop-blur-md z-50 py-4 px-6 md:px-16 w-full lg:px-24">
         <div className="flex justify-between items-center">
           <a
             href="#home"
